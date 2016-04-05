@@ -1,0 +1,108 @@
+@CHARSET "ISO-8859-1";
+
+.shoulder, .head, .hand, .bracers, .torso, .belt, .ringleft, .ringright, .legs, .weaponleft, .weaponright, .boots {
+	padding-bottom: 5px;
+}
+
+.shoulder, .hand, .ringleft, .weaponleft {
+	float: right;
+}
+
+.amulet, .bracers, .ringright, .weaponright{
+	float: left;
+}
+
+.legs, .boots {
+	margin-left: 20%;
+}
+.shoulder {
+	padding-top: 5px;
+}
+
+.head {
+	margin-left: 18%;
+}
+
+.amulet {
+	padding-top: 15px;
+	padding-bottom: 54px;
+}
+
+.hand{
+}
+
+.bracers{
+
+}
+
+.torso {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.belt {
+	margin-left: 13%;
+}
+
+.ringleft {
+
+}
+
+.ringright {
+
+}
+
+.legs {
+
+}
+
+.boots {
+
+}
+
+.weaponleft {
+}
+
+.weaponright {
+}
+
+.kanaisCube{
+	margin: 10%;
+}
+.equipmentColumn {
+	position: relative;
+	min-height: 1px;
+	float: left;
+	width: 110px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	min-height: 20px;
+  	background-color: #f5f5f5;
+  	border: 1px solid #e3e3e3;
+  	border-radius: 4px;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.kanaisColumn{
+	position: relative;
+	min-height: 1px;
+	float: left;
+	width: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	min-height: 20px;
+  	background-color: #f5f5f5;
+  	border: 1px solid #e3e3e3;
+  	border-radius: 4px;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.itemSkills {
+	background-color: 
+}

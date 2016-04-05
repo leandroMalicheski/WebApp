@@ -1,0 +1,27 @@
+<div class="row container">
+	<div class="equipmentColumn">
+		<img ng-src="{{character.shoulder.imgPath}}" class="shoulder">
+		<img ng-src="{{character.hand.imgPath}}" class="hand"> <img
+			ng-src="{{character.leftRing.imgPath}}" class="ringleft"> <img
+			ng-src="{{character.leftWeapon.imgPath}}" class="weaponleft">
+	</div>
+	<div class="equipmentColumn">
+		<img ng-src="{{character.head.imgPath}}" class="head"> <img
+			ng-src="{{character.torso.imgPath}}" class="torso"> <img
+			ng-src="{{character.belt.imgPath}}" class="belt"> <img
+			ng-src="{{character.legs.imgPath}}" class="legs"> <img
+			ng-src="{{character.boots.imgPath}}" class="boots">
+	</div>
+	<div class="equipmentColumn">
+		<img ng-src="{{character.amulet.imgPath}}" class="amulet"> <img
+			ng-src="{{character.bracers.imgPath}}" class="bracers"> <img
+			ng-src="{{character.rightRing.imgPath}}" class="ringright"> <img
+			ng-src="{{character.rightWeapon.imgPath}}" class="weaponright">
+	</div>
+</div>
+<label>Kanai's Cube</label>
+<div class="row">
+	<div class="equipmentColumn" ng-repeat="kanaysCubeItem in character.kanaysCubeItems">
+		<img ng-src="{{kanaysCubeItem.imgPath}}" class="kanaisCube">
+	</div>
+</div>

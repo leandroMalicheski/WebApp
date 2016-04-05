@@ -1,0 +1,7 @@
+<div class="skillTab list-group-item" ng-repeat="activeSkill in character.activeSkills">
+	<img ng-src="{{activeSkill.imgPath}}"> <label>{{activeSkill.name}}</label>
+	<p class="skilldescription">{{activeSkill.description}}</p>
+	<img class="skillRune" ng-src="{{activeSkill.rune.imgPath}}"> <label>{{activeSkill.rune.name}}</label>
+	<p class="runedescription">{{activeSkill.rune.description}}</p>
+</div>
+<br>

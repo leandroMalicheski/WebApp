@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="diabloApp">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="scripts/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="scripts/equipaments.css" />
+<link rel="stylesheet" type="text/css" href="scripts/skills.css" />
+<link rel="stylesheet" type="text/css" href="scripts/default.css" />
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/controllers.js"></script>
+<script type="text/javascript" src="scripts/directives.js"></script>
+</head>
+<body ng-controller="CategoryController as categoryCtrl">
+	<main-menu></main-menu>
+	<span ng-init="categoryCtrl.getItemCategoryList()"></span>
+	<div class="container" ng-repeat="category in categories">
+		<ul class="list-group">
+			<li class="list-group-item">			
+				<a href="{{category.link}}"><img ng-src="{{category.imagePath}}"></a>
+				<a href="{{category.link}}"><label>{{category.name}}</label></a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

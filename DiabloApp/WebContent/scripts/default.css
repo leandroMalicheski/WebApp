@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+
+.characterProfile {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	float: left;
+	width: 46px;
+}
+
+.characterPanel {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	float: left;
+	width: 100%;
+}
+
+.characterNameVoc {
+	padding-top: 15px; 
+	padding-left: 70px;
+	height: 46px;
+	color: #660000;
+}
+
+.buttons {
+	padding-bottom: 10px;
+}
+
+.ng-invalid.ng-dirty {
+  border-color: red;
+}
+
+.ng-valid.ng-dirty {
+  border-color: green;
+}
+
+body {
+	background-color: #f5f5f5; 
+}

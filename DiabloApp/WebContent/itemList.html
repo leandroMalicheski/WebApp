@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="diabloApp">
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="scripts/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="scripts/equipaments.css" />
+<link rel="stylesheet" type="text/css" href="scripts/skills.css" />
+<link rel="stylesheet" type="text/css" href="scripts/default.css" />
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/controllers.js"></script>
+<script type="text/javascript" src="scripts/directives.js"></script>
+</head>
+<body ng-controller="ItemsListCtrl as itemsListCtrl">
+	<main-menu></main-menu>
+	<div class="container" ng-repeat="item in itemsListCtrl.itemList">
+		<ul class="list-group">
+			<li class="list-group-item">			
+				<div class="row">
+					<div class="col-lg-1">
+						<img ng-src="{{item.image}}">
+					</div>
+					<div class="col-lg-10">
+						<label>{{item.name}}</label>
+					</div>
+					<div class="col-lg-10">
+						<label>{{item.subcat}}</label>
+					</div>
+					<div class="col-lg-10">
+						<ul class="list-group">
+							<li class="list-group-item " style="background-color: #C0C0C0;"><b style="color:#660000">Habilidade Primaria: </b>{{item.primaria}}</li>
+							<li class="list-group-item " style="background-color: #C0C0C0;"><b style="color:#660000">Habilidade Secundaria: </b>{{item.secundaria}}</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="diabloApp">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="scripts/bootstrap.css">
+<script src="scripts/angular.min.js"></script>
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Application Configurations -->
+<link rel="stylesheet" type="text/css" href="scripts/equipaments.css" />
+<link rel="stylesheet" type="text/css" href="scripts/skills.css" />
+<link rel="stylesheet" type="text/css" href="scripts/default.css" />
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/controllers.js"></script>
+<script type="text/javascript" src="scripts/directives.js"></script>
+
+</head>
+<body ng-controller="CreatePageCtrl as pageCtrl">
+	<main-menu></main-menu>
+	<div class="container">
+		<form name="createCharacterForm" ng-submit="createCharacterForm.$valid && pageCtrl.createCharacter(character)">
+			<div class="form-group">
+				
+				<label>Character Name</label>
+				<input type="text" class="form-control ng-invalid ng-dirty" ng-model="pageCtrl.character.name" required>
+				
+				<label>Character Class</label>				
+				<select ng-model="pageCtrl.character.class" name="singleSelect" id="singleSelect" class="form-control ng-invalid ng-dirty">
+					<option ng-repeat="class in pageCtrl.classList" value="{{class.name}}">{{class.name}}</option>
+    			</select>
+    			
+			</div>
+			<input type="submit" ng-click="pageCtrl.addCharacter()" value="Save" /><br>
+			
+			<div> createCharacterForm is valid: {{createCharacterForm.$valid}}</div>
+		</form>
+	</div>
+</body>
+</html>

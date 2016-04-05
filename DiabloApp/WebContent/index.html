@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="diabloApp">
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="scripts/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="scripts/equipaments.css" />
+<link rel="stylesheet" type="text/css" href="scripts/skills.css" />
+<link rel="stylesheet" type="text/css" href="scripts/default.css" />
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/controllers.js"></script>
+<script type="text/javascript" src="scripts/directives.js"></script>
+</head>
+<body ng-controller="CharacterController as characterCtrl">
+	<main-menu></main-menu>
+	<span ng-init="characterCtrl.getCharacterList()"></span>
+	<div class="container">
+		<div class="row container" ng-repeat="character in characters">
+			<div class="characterProfile">
+				<img ng-src="{{character.characterClass.imgPath}}" />
+			</div>
+			<div class="characterNameVoc col-lg-2">{{character.name}} -
+				{{character.characterClass.name}}</div>
+			<a class="btn btn-default col-lg-1"
+				ng-click="characterCtrl.setCharacterId(character.id)">Edit</a>
+			<div class="characterPanel">
+				<section ng-controller="PanelController as panel">
+					<ul class="nav nav-pills">
+						<li><a ng-click="panel.selectTab(0)">Hide</a></li>
+						<li><a ng-click="panel.selectTab(1)">Show Set</a></li>
+						<li><a ng-click="panel.selectTab(2)">Show Skills</a></li>
+						<li><a ng-click="panel.selectTab(3)">Show Passive Skills</a></li>
+					</ul>
+					<div class="panel container" ng-show="panel.isSelected(0)"></div>
+					<div class="panel container" ng-show="panel.isSelected(1)" character-equipments style="background-color: #C0C0C0;"></div>
+					<div class="panel container" ng-show="panel.isSelected(2)" character-skills style="background-color: #C0C0C0;"></div>
+					<div class="panel container" ng-show="panel.isSelected(3)" character-passive-skills style="background-color: #C0C0C0;"></div>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

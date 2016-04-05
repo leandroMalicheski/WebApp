@@ -1,0 +1,19 @@
+<div class="modal fade" role="dialog" id="shoulderModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Select your shoulder</h4>
+			</div>
+			<div class="modal-body">
+				<div ng-repeat="item in pageCtrl.shoulderList">
+					<img ng-src="{{item.image}}"><br> 
+					<label>{{item.name}}</label> <br>
+					<label>{{item.subcat}}</label><br>
+					<b style="color: #660000">Habilidade Primaria: </b>{{item.primaria}}<br>
+					<b style="color: #660000">Habilidade Secundaria: </b>{{item.secundaria}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

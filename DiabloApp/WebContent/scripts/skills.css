@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";
+
+.skilldescription {
+	margin-left: 10px; 
+	margin-right: 10px;
+}
+
+.skillTab {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.skillItem {
+	color: #337ab7;
+  	background-color: #fff;
+}
+
+.skillRune {
+	margin-left: 10px; 
+}
+
+.runedescription {
+	margin-left: 20px; 
+	margin-right: 10px;	
+}
